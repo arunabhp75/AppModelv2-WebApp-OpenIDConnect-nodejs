@@ -1,28 +1,28 @@
 exports.creds = {
   // Required
-  identityMetadata: 'https://login.microsoftonline.com/<tenant_name>.onmicrosoft.com/v2.0/.well-known/openid-configuration', 
+  identityMetadata: 'https://login.microsoftonline.com/oldsithempire.onmicrosoft.com/v2.0/.well-known/openid-configuration',
   // or equivalently: 'https://login.microsoftonline.com/<tenant_guid>/v2.0/.well-known/openid-configuration'
   //
   // or you can use the common endpoint
   // 'https://login.microsoftonline.com/common/v2.0/.well-known/openid-configuration'
   // To use the common endpoint, you have to either turn `validateIssuer` off, or provide the `issuer` value.
 
-  // Required, the client ID of your app in AAD  
-  clientID: '<your_client_id>',
+  // Required, the client ID of your app in AAD
+  clientID: '13ecfa63-ec16-45cb-b47f-3b990f33078a',
 
-  // Required if `responseType` is 'code', 'id_token code' or 'code id_token'. 
+  // Required if `responseType` is 'code', 'id_token code' or 'code id_token'.
   // If app key contains '\', replace it with '\\'.
-  clientSecret: '<your_client_secret>', 
+  clientSecret: '.mHTx.msvQh86-4q3b6.j1.0NsyOv9gA51Y',
 
   // Required, must be 'code', 'code id_token', 'id_token code' or 'id_token'
-  // If you want to get access_token, you must use 'code', 'code id_token' or 'id_token code' 
-  responseType: 'code id_token', 
+  // If you want to get access_token, you must use 'code', 'code id_token' or 'id_token code'
+  responseType: 'id_token',
 
   // Required
-  responseMode: 'form_post', 
+  responseMode: 'form_post',
 
   // Required, the reply URL registered in AAD for your app
-  redirectUrl: 'http://localhost:3000/auth/openid/return', 
+  redirectUrl: 'http://localhost:3000/auth/openid/return',
 
   // Required if we use http for redirectUrl
   allowHttpForRedirectUrl: true,
@@ -45,7 +45,7 @@ exports.creds = {
   // Required if `useCookieInsteadOfSession` is set to true. You can provide multiple set of key/iv pairs for key
   // rollover purpose. We always use the first set of key/iv pair to encrypt cookie, but we will try every set of
   // key/iv pair to decrypt cookie. Key can be any string of length 32, and iv can be any string of length 12.
-  cookieEncryptionKeys: [ 
+  cookieEncryptionKeys: [
     { 'key': '12345678901234567890123456789012', 'iv': '123456789012' },
     { 'key': 'abcdefghijklmnopqrstuvwxyzabcdef', 'iv': 'abcdefghijkl' }
   ],
