@@ -8,11 +8,11 @@ exports.creds = {
   // To use the common endpoint, you have to either turn `validateIssuer` off, or provide the `issuer` value.
 
   // Required, the client ID of your app in AAD
-  clientID: '13ecfa63-ec16-45cb-b47f-3b990f33078a',
+  clientID: 'bb320031-7f60-484b-9ea5-f4517eac4544',
 
   // Required if `responseType` is 'code', 'id_token code' or 'code id_token'.
   // If app key contains '\', replace it with '\\'.
-  clientSecret: '.mHTx.msvQh86-4q3b6.j1.0NsyOv9gA51Y',
+  clientSecret: '.B6.SPF49A_N6ADBOs22-kCrMUK4o..uaQ',
 
   // Required, must be 'code', 'code id_token', 'id_token code' or 'id_token'
   // If you want to get access_token, you must use 'code', 'code id_token' or 'id_token code'
@@ -22,13 +22,13 @@ exports.creds = {
   responseMode: 'form_post',
 
   // Required, the reply URL registered in AAD for your app
-  redirectUrl: 'http://localhost:3000/auth/openid/return',
+  redirectUrl: 'https://oldsithempire.com/auth/openid/return',
 
   // Required if we use http for redirectUrl
-  allowHttpForRedirectUrl: true,
+  allowHttpForRedirectUrl: false,
 
   // Required to set to false if you don't want to validate issuer
-  validateIssuer: false,
+  validateIssuer: true,
 
   // Required if you want to provide the issuer(s) you want to validate instead of using the issuer from metadata
   // issuer could be a string or an array of strings of the following form: 'https://sts.windows.net/<tenant_guid>/v2.0'
